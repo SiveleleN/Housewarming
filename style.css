@@ -8,6 +8,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    background-color: #f8f1e5;
 }
 .envelope-container {
     position: relative;
