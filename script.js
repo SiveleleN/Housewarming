@@ -27,7 +27,7 @@ function updateRSVP(status) {
 }
 
 function sendEmail(name, status) {
-    var email = "sivelelenkamane29@gmail.com"; 
+    var email = "sivelelenkamane29@gmail.com"; // Replace with your email
     var form = document.createElement("form");
     form.action = "https://formsubmit.co/" + email;
     form.method = "POST";

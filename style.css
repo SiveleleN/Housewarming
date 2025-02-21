@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f8f1e5;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -16,7 +15,7 @@ body {
     margin-top: 20px;
 }
 .envelope {
-    width: 400px; /* Increased size for larger screens */
+    width: 400px; /* Adjusted size */
     height: 250px;
     background: #d2691e;
     position: relative;
@@ -25,7 +24,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 24px; /* Larger font for bigger screens */
+    font-size: 24px; /* Larger font for better visibility */
     font-weight: bold;
     color: white;
 }
@@ -85,15 +84,14 @@ body {
     color: white;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
     .envelope {
-        width: 80%; 
-        height: 200px;
-        font-size: 20px;
+        width: 90%; /* Increased envelope size */
+        height: 250px; /* Increased height for mobile */
+        font-size: 22px; /* Slightly larger font size */
     }
     .note {
-        width: 90%; 
+        width: 90%;
         padding: 15px;
         font-size: 14px;
     }
@@ -105,17 +103,17 @@ body {
 
 @media (max-width: 480px) {
     .envelope {
-        width: 90%;
-        height: 180px;
-        font-size: 18px; 
+        width: 95%; /* Further increase envelope size */
+        height: 300px; /* Increased height for small screens */
+        font-size: 24px; /* Larger font size for better visibility */
     }
     .note {
-        width: 95%;
+        width: 90%;
         padding: 10px;
-        font-size: 12px;
+        font-size: 14px;
     }
     .buttons button {
-        padding: 6px 12px;
-        font-size: 12px;
+        padding: 10px 20px;
+        font-size: 16px;
     }
 }
