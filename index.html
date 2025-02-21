@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housewarming Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="envelope-container">
+        <div class="envelope" onclick="toggleNote()">📩</div>
+        <div class="note">
+            <h1>🏡 Housewarming Invitation 🎉</h1>
+            <p>🏡 You're Invited! 🎉</p>
+            <p>Let's make new memories in my new space! 💛</p>
+            <p>📍 Location: 23312 Jikeka crescent Mandela Park Khayelitsha</p>
+            <p>📅 Date: 29 March 2025</p>
+            <p>⏰ Time: 16:30</p>
+            <p>🎶 Good vibes, food & fun guaranteed!</p>
+            <p>🍾 Please bring your own alcohol!</p>
+            <p>RSVP by 20 March 2025 | Contact: 0692527573</p>
+            
+            <div class="buttons">
+                <button class="accept-btn" onclick="updateRSVP('accepted')">✅ Accept</button>
+                <button class="reject-btn" onclick="updateRSVP('rejected')">❌ Reject</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

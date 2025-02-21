@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f1e5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.envelope-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+.envelope {
+    width: 400px; /* Increased size for larger screens */
+    height: 250px;
+    background: #d2691e;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px; /* Larger font for bigger screens */
+    font-weight: bold;
+    color: white;
+}
+.envelope.locked {
+    background: #555;
+    cursor: not-allowed;
+}
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #a0522d;
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+.note {
+    width: 350px;
+    height: auto;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.5s ease-in-out;
+    background-color: #fff8dc;
+    line-height: 1.5;
+}
+.show-note {
+    transform: translate(-50%, -220px) scale(1);
+}
+.buttons {
+    margin-top: 15px;
+}
+.buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.accept-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+.reject-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .envelope {
+        width: 80%; 
+        height: 200px;
+        font-size: 20px;
+    }
+    .note {
+        width: 90%; 
+        padding: 15px;
+        font-size: 14px;
+    }
+    .buttons button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .envelope {
+        width: 90%;
+        height: 180px;
+        font-size: 18px; 
+    }
+    .note {
+        width: 95%;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .buttons button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
