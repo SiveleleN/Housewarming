@@ -1,28 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-    if (localStorage.getItem("rsvpSubmitted")) {
-        document.querySelector(".envelope").classList.add("locked");
-    }
-});
+function openEnvelope() {
+    document.querySelector(".envelope").classList.add("open");
 
-function toggleNote() {
-    var envelope = document.querySelector(".envelope");
-    var note = document.querySelector(".note");
-
-    if (!envelope.classList.contains("locked")) {
-        note.classList.toggle("show-note");
-    }
+    setTimeout(() => {
+        document.querySelector(".invitation").classList.add("show");
+    }, 800);
 }
 
 function updateRSVP(status) {
     var name = prompt("Enter your name:");
     if (name) {
         sendEmail(name, status);
-
-        document.querySelector(".note").classList.remove("show-note");
-        document.querySelector(".envelope").classList.add("locked");
-        alert("Your response has been sent! You cannot RSVP again.");
-
-        localStorage.setItem("rsvpSubmitted", true);
+        alert("Your response has been sent! Thank you.");
     }
 }
 

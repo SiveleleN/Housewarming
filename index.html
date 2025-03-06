@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Housewarming Invitation</title>
+    <title>Pre-birthday and Housewarming</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  
     <div class="envelope-container">
-        <div class="envelope" onclick="toggleNote()">📩</div>
+        <div class="envelope" onclick="openEnvelope()">
+            <div class="flap"></div>
+            <div class="body">
+                <button class="open-btn">📩</button>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="invitation">
         <div class="note">
-            <h1>🏡 Housewarming Invitation 🎉</h1>
-            <p>🏡 You're Invited! 🎉</p>
-            <p>Let's make new memories in my new space! 💛</p>
+            <h1>🏡 Housewarming & Birthday Mode 🎂🎉</h1>
+            <p>🏡 You're Invited! 🎂🎉</p>
+            <p>Let's make new memories in my new space and celebrate 28 Birthday ! 💛</p>
             <p>📍 Location: 23312 Jikeka Crescent, Mandela Park, Khayelitsha</p>
             <p>📅 Date: 29 March 2025</p>
             <p>⏰ Time: 16:30</p>
-            <p>🎶 Good vibes, food & fun guaranteed!</p>
-            <p>🍾 Please bring your own alcohol!</p>
+            <p>🎶 Games Night! 🕹️👾🎲</p>
+            <p>🍾 Please bring your carry pack!</p>
             <p>RSVP by 20 March 2025 | Contact: 0692527573</p>
             
             <div class="buttons">
@@ -26,6 +37,7 @@
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

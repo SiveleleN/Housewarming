@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +8,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f8f1e5;
+    overflow: hidden;
 }
 .envelope-container {
     position: relative;
@@ -16,22 +16,22 @@ body {
     margin-top: 20px;
 }
 .envelope {
-    width: 400px; /* Adjusted size */
-    height: 250px;
+    width: 300px;
+    height: 200px;
     background: #d2691e;
     position: relative;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 24px; /* Larger font for better visibility */
+    font-size: 24px;
     font-weight: bold;
     color: white;
+    transition: transform 0.5s;
 }
-.envelope.locked {
-    background: #555;
-    cursor: not-allowed;
+.envelope.open {
+    transform: translateY(-50px);
 }
 .envelope::before {
     content: "";
@@ -43,27 +43,29 @@ body {
     background: #a0522d;
     clip-path: polygon(0 0, 100% 0, 50% 50%);
 }
-.note {
-    width: 350px;
-    height: auto;
-    background: white;
+.open-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+.invitation {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    background: white;
     padding: 20px;
+    border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     font-size: 16px;
-    font-weight: bold;
     color: #333;
-    transition: transform 0.5s ease-in-out;
-    background-color: #fff8dc;
-    line-height: 1.5;
 }
-.show-note {
-    transform: translate(-50%, -220px) scale(1);
+.invitation.show {
+    display: block;
 }
 .buttons {
     margin-top: 15px;
@@ -84,37 +86,30 @@ body {
     background-color: #d9534f;
     color: white;
 }
-
 @media (max-width: 768px) {
     .envelope {
-        width: 90%; /* Increased envelope size */
-        height: 250px; /* Increased height for mobile */
-        font-size: 22px; /* Slightly larger font size */
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        
     }
-    .note {
+    .invitation {
         width: 90%;
-        padding: 15px;
         font-size: 14px;
-    }
-    .buttons button {
-        padding: 8px 15px;
-        font-size: 14px;
+        position: absolute;
+        margin-top: 20px;
+        
     }
 }
-
 @media (max-width: 480px) {
     .envelope {
-        width: 95%; /* Further increase envelope size */
-        height: 300px; /* Increased height for small screens */
-        font-size: 24px; /* Larger font size for better visibility */
-    }
-    .note {
         width: 90%;
-        padding: 10px;
-        font-size: 14px;
+        height: 160px;
     }
-    .buttons button {
-        padding: 10px 20px;
-        font-size: 16px;
+    .invitation {
+        width: 95%;
+        font-size: 14px;
+        padding: 15px;
     }
 }
